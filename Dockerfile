@@ -1,3 +1,4 @@
+#Dockerfile for angular-example-app
 FROM node:11-alpine AS builder
 COPY . ./angular-example-app
 WORKDIR /angular-example-app
