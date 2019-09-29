@@ -5,7 +5,6 @@ WORKDIR /angular-example-app
 RUN npm install
 RUN npm run build:prod:en
 
-#Download the nginx image
 FROM nginx:1-alpine
 COPY --from=builder /angular-example-app/dist/browser/ /usr/share/nginx/html
 EXPOSE 80
